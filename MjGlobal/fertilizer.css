@@ -105,7 +105,7 @@ header {
     .menu-icon {
         display: none;
         font-size: 24px;
-        cursor: pointer; 
+        cursor: pointer;
         position: absolute;
         right: 15px;
     }
@@ -126,7 +126,7 @@ header {
         .menu-icon {
             display: block;
         }
-        
+
         .navLinks {
             display: flex;
             z-index: 100;
@@ -149,7 +149,7 @@ header {
             display: flex;
         }
 
-       
+
 
     }
 }
@@ -250,3 +250,337 @@ header {
     }
 }
 
+
+/* //sec1 */
+
+.sec1 {
+    height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.128), rgba(0, 0, 0, 0.288)), url("img/compost_bag_1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border: 1px solid transparent;
+
+    h1 {
+        position: relative;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-top: 100px;
+        max-width: 700px;
+        line-height: 1.3;
+        color: white;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .sec1 {
+        text-align: center;
+        padding: 50px 10px;
+    }
+
+    .sec1 h1 {
+        font-size: 2rem;
+        max-width: 100%;
+    }
+}
+
+
+/* //sec2 */
+.sec2 {
+    height: auto;
+    padding: 80px 20px;
+    text-align: center;
+    background: #f4f4f4;
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        color: #033012;
+    }
+
+    .card-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        background: white;
+        padding: 30px;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card img {
+        width: 30%;
+        margin-bottom: 15px;
+    }
+
+    .card p {
+        font-size: 1.2rem;
+        color: #555;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+    }
+}
+
+
+
+/* //sec3 */
+.sec3 {
+    height: auto;
+    background-color: #679267;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .content {
+        h1 {
+            font-size: 35px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            color: black;
+        }
+
+        li {
+            font-weight: bold;
+            font-size: larger;
+        }
+    }
+
+    .icons {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            height: 100%;
+        }
+    }
+}
+
+
+/* //sec5 */
+.sec5 {
+    height: auto;
+
+    .compost {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .c_bag {
+            width: 20%;
+
+            img {
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .sec5x {
+        .compost {
+            flex-direction: column;
+
+            .c_bag {
+                width: 50%;
+
+                img {
+                    height: 300px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .sec2 {
+        .compost {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .c_bag {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    height: 300px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .sec2 {
+        .compost {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .c_bag {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    height: 300px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+/* //footer */
+.footer {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .footer-about {
+        width: 20%;
+    }
+
+    .footer-about p,
+    .footer-contact p,
+    .footer-newsletter p {
+        line-height: 1.6;
+    }
+
+    .footer-links {
+        /* border: 2px solid; */
+        width: 10%;
+    }
+
+    .footer-links ul {
+        list-style: inside;
+        padding: 0;
+    }
+
+    .footer-links ul li {
+        margin: 10px 0;
+    }
+
+    .footer-links ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .footer-links ul li a:hover {
+        color: #ffb400;
+        /* Accent color */
+    }
+
+    .footer-contact p {
+        margin: 10px 0;
+    }
+
+    .footer-newsletter form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-newsletter input {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        width: 100%;
+    }
+
+    .footer-newsletter button {
+        padding: 10px;
+        background-color: #ffb400;
+        color: #2c2c2c;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+    .footer-newsletter button:hover {
+        background-color: #ff9900;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        border-top: 1px solid #444444;
+        padding-top: 20px;
+    }
+
+    .footer-bottom p {
+        margin: 10px 0;
+    }
+
+    .footer-social a {
+        margin: 0 10px;
+        color: #ffffff;
+        font-size: 1.5rem;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .footer-social a:hover {
+        color: #ffb400;
+    }
+
+    i:hover {
+        transform: rotateY(360deg);
+        transition: 1s;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        .footer-about {
+            width: 100%;
+        }
+
+        .footer-links {
+            width: 100%;
+        }
+    }
+}
