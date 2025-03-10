@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FRUITS</title>
+
+    <link rel="stylesheet" href="fruits.css">
+
+    <!-- //bootstrape -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
+
+    <!-- jQuery CDN (Required for Slick) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+
+
+    <nav>
+        <div class="marquee">
+            <h2 data-key="marquee1">🍎 Fresh Fruits & 🌱 Organic Compost – Grow Healthy!</h2>
+            <h2 data-key="marquee2">🌿 Pure Compost & 🍊 Juicy Fruits – Naturally Best!</h2>
+            <h2 data-key="marquee3">🍏 Farm Fresh Fruits & 🌱 Rich Compost for You!</h2>
+            <h2 data-key="marquee4">🌱 Healthy Soil, 🍇 Healthy Life!</h2>
+            <h2 data-key="marquee5">🍉 Freshness & 🌿 Fertility in Every Bite!</h2>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="marquee">
+            <h2 data-key="marquee1">🍎 Fresh Fruits & 🌱 Organic Compost – Grow Healthy!</h2>
+            <h2 data-key="marquee2">🌿 Pure Compost & 🍊 Juicy Fruits – Naturally Best!</h2>
+            <h2 data-key="marquee3">🍏 Farm Fresh Fruits & 🌱 Rich Compost for You!</h2>
+            <h2 data-key="marquee4">🌱 Healthy Soil, 🍇 Healthy Life!</h2>
+            <h2 data-key="marquee5">🍉 Freshness & 🌿 Fertility in Every Bite!</h2>
+        </div>
+
+        <!-- Language Selection Dropdown -->
+        <div class="language-container">
+            <select id="languageSelect">
+                <option value="English"> English</option>
+                <option value="Hindi"> हिंदी</option>
+                <option value="Gujarati"> ગુજરાતી</option>
+            </select>
+        </div>
+
+    </nav>
+
+    <header>
+
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+        <div class="navLinks">
+            <a href="index.html" data-key="home">HOME</a>
+            <a href="fruits.html" data-key="fruits" style="color: green; font-weight: bold;" >FRUITS</a>
+            <a href="fertilizer.html" data-key="fertilizer">FERTILIZER</a>
+            <a href="about.html" data-key="about">ABOUT US</a>
+            <a href="contact.html" data-key="contact">CONTACT US</a>
+        </div>
+        
+    </header>
+
+
+
+    <!-- //sec1 -->
+    <div class="sec1">
+        <div class="video-container">
+            <video id="myVideo" src="img/vid1.mp4" controls muted></video>
+        </div>
+    </div>
+
+
+    <!-- //sec 2 -->
+
+    <div class="sec2 container-fluid">
+
+        <div class="slider-container">
+
+            <div class="fruit-slider">
+
+                <div class="slide">
+                    <img src="img/apple.png" alt="Apple">
+                    <p>Apple</p>
+                </div>
+                <div class="slide">
+                    <img src="img/strawberry.png" alt="">
+                    <p>Strawberry</p>
+                </div>
+                <div class="slide">
+                    <img src="img/orange.png" alt="">
+                    <p>Orange</p>
+                </div>
+                <div class="slide">
+                    <img src="img/grapes.png" alt="">
+                    <p>Grapes</p>
+                </div>
+                <div class="slide">
+                    <img src="img/pineapple.png" alt="">
+                    <p>Pineapple</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- //sec 3 -->
+
+    <div class="fun-fruit-facts">
+
+        <div class="fruit" style="position: relative; top: 100px; left: 100px;" data-tagline="Banana is a berry">
+            <img src="img/banana.png" alt="Banana">
+            <p class="tagline">Banana is a berry</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: 200px; left: 200px;"
+            data-tagline="Apple keeps the doctor away">
+            <img src="img/apple.png" alt="Apple">
+            <p class="tagline">Apple keeps the doctor away</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -50px; left: 350px;"
+            data-tagline="Strawberries are not berries">
+            <img src="img/strawberry.png" alt="Strawberry">
+            <p class="tagline">Strawberries are not berries</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: 100px; left: 300px;" data-tagline="Watermelon is 92% water">
+            <img src="img/watermelon.png" alt="Watermelon">
+            <p class="tagline">Watermelon is 92% water</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -300px; transform: rotate(20deg); left: 700px;"
+            data-tagline="Pineapple takes 2 years to grow">
+            <img src="img/pineapple1.png" alt="Pineapple">
+            <p class="tagline">Pineapple takes 2 years to grow</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -300px; left: 550px;"
+            data-tagline="Mango is the king of fruits">
+            <img src="img/mango.png" alt="Mango">
+            <p class="tagline">Mango is the king of fruits</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -80px; left: 800px;"
+            data-tagline="Grapes can be turned into wine">
+            <img src="img/grapes.png" alt="Grapes">
+            <p class="tagline">Grapes can be turned into wine</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -400px; left: 900px;"
+            data-tagline="Oranges are hybrids of pomelo and mandarin">
+            <img src="img/orange.png" alt="Orange">
+            <p class="tagline">Oranges are hybrids of pomelo and mandarin</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -300px; left: 1200px;"
+            data-tagline="Papayas have black seeds inside">
+            <img src="img/papaya.png" alt="Papaya">
+            <p class="tagline">Papayas have black seeds inside</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -880px; left: 1100px;"
+            data-tagline="Pomegranates have 600 seeds">
+            <img src="img/pomegranate.jpg" alt="Pomegranate">
+            <p class="tagline">Pomegranates have 600 seeds</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -550px; left: 1000px;"
+            data-tagline="Kiwi has more vitamin C than orange">
+            <img src="img/kiwi.jpg" alt="Kiwi">
+            <p class="tagline">Kiwi has more vitamin C than orange</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -1000px; left: 900px;"
+            data-tagline="Blueberries are good for the brain">
+            <img src="img/blueberry.png" alt="Blueberry">
+            <p class="tagline">Blueberries are good for the brain</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -1000px; left: 1000px;"
+            data-tagline="Peach is a member of the rose family">
+            <img src="img/peach.png" alt="Peach">
+            <p class="tagline">Peach is a member of the rose family</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -1000px; left: 1300px;"
+            data-tagline="Coconut is both a fruit and a nut">
+            <img src="img/coconut.png" alt="Coconut">
+            <p class="tagline">Coconut is both a fruit and a nut</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -1000px; left: 570px;"
+            data-tagline="Cherries are rich in antioxidants">
+            <img src="img/cherry.png" alt="Cherry">
+            <p class="tagline">Cherries are rich in antioxidants</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -1000px; left: 450px;"
+            data-tagline="Avocado is high in healthy fats">
+            <img src="img/avocado.png" alt="Avocado">
+            <p class="tagline">Avocado is high in healthy fats</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -1600px; left: 250px;"
+            data-tagline="Dragon fruit has a unique appearance">
+            <img src="img/dragon.webp" alt="Dragon Fruit">
+            <p class="tagline">Dragon fruit has a unique appearance</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -1350px; left: 1100px;"
+            data-tagline="Guavas have edible seeds">
+            <img src="img/guava.png" alt="Guava">
+            <p class="tagline">Guavas have edible seeds</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -1400px; left: 100px;"
+            data-tagline="Plums help in digestion">
+            <img src="img/plum.png" alt="Plum">
+            <p class="tagline">Plums help in digestion</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -1600px; left: 700px;"
+            data-tagline="Lychee is a tropical fruit">
+            <img src="img/lychee.png" alt="Lychee">
+            <p class="tagline">Lychee is a tropical fruit</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -1600px; left: 750px;"
+            data-tagline="Apricots are packed with vitamins">
+            <img src="img/apricot.png" alt="Apricot">
+            <p class="tagline">Apricots are packed with vitamins</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -1600px; left: 620px;"
+            data-tagline="Blackberries are rich in fiber">
+            <img src="img/blackberry.png" alt="Blackberry">
+            <p class="tagline">Blackberries are rich in fiber</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -1900px; left: 400px;"
+            data-tagline="Cranberries help prevent UTIs">
+            <img src="img/craneberry.png" alt="Cranberry">
+            <p class="tagline">Cranberries help prevent UTIs</p>
+        </div>
+
+        <div class="fruit" style="position: relative; top: -2250px; left: 500px;"
+            data-tagline="Fig is one of the oldest fruits">
+            <img src="img/fig.png" alt="Fig">
+            <p class="tagline">Fig is one of the oldest fruits</p>
+        </div>
+    </div>
+
+
+    <!-- //sec 4 -->
+
+    <div class="container-fluid sec4">
+
+        <a href="pomegranet.html">
+            <div class="pomegranate">
+                <img src="img/pomegranate6.jpg" alt="">
+                <div class="content">
+                    <h1>Premium Export Pomegranates</h1> <br>
+                    <h6>We export premium quality pomegranates, ensuring freshness and rich taste in every bite. Our
+                        carefully selected pomegranates meet international standards for superior quality and nutrition.
+                        🍎✨</h6>
+                    <p>Our high-quality pomegranates are packed with nutrients, rich in antioxidants, and known for
+                        their sweet, juicy flavor. Grown using sustainable farming practices, we ensure each fruit meets
+                        the highest export standards for freshness and taste. With vibrant red seeds and exceptional
+                        quality, our pomegranates are a perfect choice for a healthy lifestyle.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="mango.html">
+            <div class="pomegranate">
+                <div class="content">
+                    <h1>Premium Export Mangoes</h1> <br>
+                    <h6>We export premium quality mangoes, delivering rich sweetness and tropical flavor in every bite.
+                        Our carefully selected mangoes meet international standards for superior quality and freshness.
+                        🥭✨</h6>
+                    <p>Our high-quality mangoes are packed with essential vitamins, bursting with natural sweetness, and
+                        known for their rich, juicy texture. Grown using sustainable farming practices, we ensure each
+                        fruit meets the highest export standards for freshness and taste. With vibrant golden flesh and
+                        exceptional flavor, our mangoes are a perfect choice for a delicious and healthy treat.</p>
+                </div>
+                <img src="img/mango_basket.png" alt="">
+            </div>
+        </a>
+
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h2>About Us</h2>
+                <p>
+                    We specialize in exporting high-quality compost and fresh fruits, ensuring superior standards and
+                    sustainability in every product. 🍏🌿
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="fruits.html">FRUITS</a>
+                    </li>
+                    <li>
+                        <a href="fertilizer.html">FERTILIZER</a>
+                    </li>
+                    <li>
+                        <a href="about.html">ABOUT US</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">CONTACT US</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h2>Contact Us</h2>
+                <p>Email: mjtraderrajkot03@gmail.com, <br> <span class="ms-5"> info@mjglobalexim.com</span></p>
+                <p>Phone: +91 8460356706</p>
+                <p>Address: 21 Dhebar Road, rajkot, Gujarat</p>
+            </div>
+
+            <div class="footer-newsletter">
+                <h2>Newsletter</h2>
+                <p>Subscribe to our newsletter for the latest updates on our <br> premium exports and fresh produce! 🌍✨
+                </p>
+                <form>
+                    <input type="email" placeholder="Enter your email" required />
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Export Fresh Co. All Rights Reserved.</p>
+            <div class="footer-social">
+
+                <a href="https://www.instagram.com/rangrag_studio?igsh=MWljc3U0YnZvenlteQ==" target="_blank"
+                    rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/people/RangRag-Interior-Design-Studio/61561135798667/" target="_blank"
+                    rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/rangrag-studio/" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://youtube.com/@rangraginterior?si=ysiDjGfY8xrtHrgY" target="_blank"
+                    rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.justdial.com/Rajkot/Rangrag-Studio-Near-Haridarshan-School-Mavdi/0281PX281-X281-240707141959-Z2N8_BZDET?catid=&checkin=&checkout=&vpfs=&stxt=%20Interior%203D%20Visualization%20Services&nid=11466419&stype=category_list&search=Interior-3D-Visualization-Services&area=Near%20Haridarshan%20School%20Mavdi&type=Architectural%20Walkthroughs&totalJdReviews=undefined&bdmsgtype=7&bdcaptiontype=6&bdpage=rsltpge&slectedDimgTag=&show_open_abd=0"
+                    target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google"></i></a>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- //bootstrape -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Slick JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+</body>
+
+
+</html>
+
+<script>
+
+    //Navbar
+    function toggleMenu() {
+        let navLinks = document.querySelector(".navLinks");
+        if (navLinks.classList.contains("show")) {
+            navLinks.style.maxHeight = "0";
+            setTimeout(() => navLinks.classList.remove("show"), 500);
+        } else {
+            navLinks.classList.add("show");
+            navLinks.style.maxHeight = "300px";
+        }
+    }
+
+
+
+    //video sec1
+
+    const video = document.getElementById("myVideo");
+
+    window.addEventListener("scroll", () => {
+        let videoPosition = video.getBoundingClientRect().top;
+        let screenHeight = window.innerHeight;
+
+        if (videoPosition < screenHeight * 0.75) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    });
+
+
+    //sec2 slider
+
+    $(document).ready(function () {
+        $('.fruit-slider').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            dots: true,
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    });
+
+
+    //sec3
+    // document.addEventListener("DOMContentLoaded", function() {
+    //     const fruits = document.querySelectorAll(".fruit");
+    //     // fruits.forEach(fruit => {
+    //     //     let x = Math.random() * 80 + "%";
+    //     //     let y = Math.random() * 80 + "%";
+    //     //     fruit.style.left = x;
+    //     //     fruit.style.top = y;
+    //     // });
+    // });
+
+
+    // Language Translations
+    const translations = {
+        English: {
+            marquee1: "🍎 Fresh Fruits & 🌱 Organic Compost – Grow Healthy!",
+            marquee2: "🌿 Pure Compost & 🍊 Juicy Fruits – Naturally Best!",
+            marquee3: "🍏 Farm Fresh Fruits & 🌱 Rich Compost for You!",
+            marquee4: "🌱 Healthy Soil, 🍇 Healthy Life!",
+            marquee5: "🍉 Freshness & 🌿 Fertility in Every Bite!",
+            home: "HOME",
+            about: "ABOUT US",
+            dryFruits: "DRY FRUITS",
+            fruits: "FRUITS",
+            fertilizer: "FERTILIZER",
+            contact: "CONTACT US"
+        },
+
+        Hindi: {
+            marquee1: "🍎 ताजे फल और 🌱 जैविक खाद – स्वस्थ बनें!",
+            marquee2: "🌿 शुद्ध खाद और 🍊 रसदार फल – स्वाभाविक रूप से श्रेष्ठ!",
+            marquee3: "🍏 ताजा फार्म फल और 🌱 समृद्ध खाद आपके लिए!",
+            marquee4: "🌱 स्वस्थ मिट्टी, 🍇 स्वस्थ जीवन!",
+            marquee5: "🍉 ताजगी और 🌿 उर्वरता हर काट में!",
+            home: "होम",
+            about: "हमारे बारे में",
+            dryFruits: "सूखे मेवे",
+            fruits: "फल",
+            fertilizer: "उर्वरक",
+            contact: "संपर्क करें"
+        },
+        Gujarati: {
+            marquee1: "🍎 તાજા ફળ અને 🌱 ઓર્ગેનિક કોમ્પોસ્ટ – સ્વસ્થ રહો!",
+            marquee2: "🌿 શુદ્ધ કોમ્પોસ્ટ અને 🍊 રસદાર ફળ – સ્વાભાવિક શ્રેષ્ઠ!",
+            marquee3: "🍏 ફાર્મ તાજા ફળ અને 🌱 સમૃદ્ધ કોમ્પોસ્ટ તમારા માટે!",
+            marquee4: "🌱 આરોગ્યપ્રદ જમીન, 🍇 આરોગ્યપ્રદ જીવન!",
+            marquee5: "🍉 તાજગી અને 🌿 ઉર્વરતા દરેક બાઈટમાં!",
+            home: "હોમ",
+            about: "અમારા વિશે",
+            dryFruits: "શુકા ફળ",
+            fruits: "ફળ",
+            fertilizer: "ખાતર",
+            contact: "સંપર્ક કરો"
+        }
+    };
+
+    // Function to change language
+    function changeLanguage() {
+        let selectedLang = document.getElementById("languageSelect").value;
+
+        // Find all elements with `data-key`
+        document.querySelectorAll("[data-key]").forEach(element => {
+            let key = element.getAttribute("data-key"); // Get translation key
+            element.innerText = translations[selectedLang][key]; // Update text
+        });
+    }
+
+    // Attach event listener to language dropdown
+    document.getElementById("languageSelect").addEventListener("change", changeLanguage);
+
+
+</script>

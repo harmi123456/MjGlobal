@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Mj Global Exim</title>
+
+    <!-- //link css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- //bootstrape -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- //swiper slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+
+
+</head>
+
+
+<!-- //slider css -->
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+    *,
+    *::before,
+    *::after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    #body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: #000;
+        min-height: 100vh;
+        background-image: linear-gradient(120deg, rgba(211, 211, 211, 0.753) 16%, rgba(179, 179, 179, 0.379) 96%), url("img/varmi\ compost\ \ small\ earthworm\ in\ hand\ hd\ imege\ in\ nature\ farm\ 01-03-2025\ at\ 11-42-44.jpeg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+  
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        position: relative;
+        display: grid;
+        grid-template-columns: 45% 50%;
+        place-items: center;
+        gap: 40px;
+        overflow: hidden;
+        padding: 80px 60px;
+    }
+
+    .content {
+        padding: 0 50px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .content h1 {
+        font-family: "Courgette", cursive;
+        font-size: clamp(2.3rem, 4vw, 4rem);
+        line-height: 1.3;
+        margin-bottom: 30px;
+        color: #004b17;
+        pointer-events: none;
+    }
+
+    .content p {
+        font-family: inherit;
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        font-weight: 400;
+        line-height: 1.5;
+        margin-bottom: 30px;
+        color: #006c24;
+        text-align: justify;
+        pointer-events: none;
+    }
+
+    .swiper-slide .content h1 {
+        transform: translateY(-40px);
+        opacity: 0;
+        transition-duration: 1s;
+        transition-delay: 0.6s;
+    }
+
+    .swiper-slide .content p {
+        transform: translateY(-30px);
+        opacity: 0;
+        transition-duration: 1s;
+        transition-delay: 1.2s;
+    }
+
+    .swiper-slide-active .content h1,
+    .swiper-slide-active .content p {
+        transform: none;
+        opacity: 1;
+    }
+
+    .image-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 5px;
+    }
+
+    .item {
+        max-width: 180px;
+        aspect-ratio: 4/3;
+        border-radius: 6px;
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    .swiper-slide-active .item {
+        animation: fadeIn 0.5s linear 1 forwards;
+        animation-delay: calc(1.4s + (0.1s * var(--i)));
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    /* BUTTON */
+
+    .btn {
+        max-width: max-content;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        border: none;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #f4f0ff;
+        text-align: center;
+        backdrop-filter: blur(10px);
+        cursor: pointer;
+    }
+
+    .btn::before,
+    .btn::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 0.5rem;
+        background: linear-gradient(180deg,
+                rgba(2, 74, 34, 0) 0%,
+                rgba(1, 66, 24, 0.4) 100%),
+            rgba(3, 92, 30, 0.2);
+        box-shadow: inset 0 0 8px rgba(0, 59, 2, 0.4);
+        z-index: -1;
+    }
+
+    .btn::after {
+        opacity: 0;
+        transition: all 0.3s ease-in;
+    }
+
+    .btn:hover::after {
+        opacity: 0.8;
+    }
+
+    .btn-border {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 0.5rem;
+        z-index: -1;
+    }
+
+    .btn-border::before {
+        content: "";
+        position: absolute;
+        border-radius: 0.5rem;
+        padding: 1px;
+        inset: 0;
+        background: linear-gradient(180deg,
+                rgba(247, 176, 118, 0.2) 0%,
+                rgba(184, 238, 255, 0) 100%),
+            linear-gradient(0deg, rgba(247, 176, 118, 0.3), rgba(247, 176, 118, 0.4));
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: xor;
+        -webkit-mask-composite: xor;
+        pointer-events: none;
+    }
+
+    .swiper-slide .btn {
+        transform: translateY(-30px);
+        opacity: 0;
+        transition-duration: 0.8s;
+        transition-delay: 1.6s;
+    }
+
+    .swiper-slide-active .btn {
+        transform: none;
+        opacity: 1;
+    }
+
+    
+
+
+    @media (max-width: 1200px) {
+        .swiper-slide {
+            grid-template-columns: 40% 55%;
+            gap: 60px;
+        }
+
+        .content {
+            padding: 0 30px 0 0;
+        }
+
+        .item {
+            max-width: 180px;
+        }
+    }
+
+    @media (max-width: 1030px) {
+        .swiper-slide {
+            padding: 80px 60px 60px;
+        }
+
+        .content p {
+            text-align: initial;
+            line-height: 1.4;
+        }
+
+        .item {
+            max-width: 150px;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+        }
+    }
+
+    @media (max-width: 960px) {
+        .swiper-slide {
+            gap: 30px;
+            padding: 60px 40px;
+        }
+
+        .item {
+            max-width: 130px;
+        }
+
+        .btn {
+            padding: 0.8rem 1.3rem;
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 740px) {
+        .swiper-slide {
+            grid-template-columns: 100%;
+            grid-template-rows: 35% 60%;
+            grid-template-areas:
+                "imageContainer"
+                "content";
+            gap: 30px;
+            padding: 60px 40px;
+        }
+
+        .content {
+            grid-area: content;
+            padding: 0 20px 0 0;
+        }
+
+        .content h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            text-align: center;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .image-container {
+            grid-area: imageContainer;
+        }
+
+        .item {
+            max-width: 110px;
+        }
+
+        .btn {
+            padding: 0.8rem 1rem;
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 580px) {
+        .swiper-slide {
+            grid-template-rows: 40% 55%;
+            padding: 50px 20px 50px;
+        }
+
+        .item {
+            max-width: 80px;
+        }
+
+    }
+
+    @media (max-width: 440px) {
+        .swiper-slide {
+            grid-template-rows: 35% 60%;
+            padding: 50px 20px 40px;
+        }
+
+        .item {
+            max-width: 80px;
+        }
+
+        .content p {
+            font-size: 0.9rem;
+        }
+    }
+</style>
+
+
+<body>
+
+    <nav>
+        <div class="marquee">
+            <h2 data-key="marquee1">🍎 Fresh Fruits & 🌱 Organic Compost – Grow Healthy!</h2>
+            <h2 data-key="marquee2">🌿 Pure Compost & 🍊 Juicy Fruits – Naturally Best!</h2>
+            <h2 data-key="marquee3">🍏 Farm Fresh Fruits & 🌱 Rich Compost for You!</h2>
+            <h2 data-key="marquee4">🌱 Healthy Soil, 🍇 Healthy Life!</h2>
+            <h2 data-key="marquee5">🍉 Freshness & 🌿 Fertility in Every Bite!</h2>
+        </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="marquee">
+            <h2 data-key="marquee1">🍎 Fresh Fruits & 🌱 Organic Compost – Grow Healthy!</h2>
+            <h2 data-key="marquee2">🌿 Pure Compost & 🍊 Juicy Fruits – Naturally Best!</h2>
+            <h2 data-key="marquee3">🍏 Farm Fresh Fruits & 🌱 Rich Compost for You!</h2>
+            <h2 data-key="marquee4">🌱 Healthy Soil, 🍇 Healthy Life!</h2>
+            <h2 data-key="marquee5">🍉 Freshness & 🌿 Fertility in Every Bite!</h2>
+        </div>
+
+        <!-- Language Selection Dropdown -->
+        <div class="language-container">
+            <select id="languageSelect">
+                <option value="English"> English</option>
+                <option value="Hindi"> हिंदी</option>
+                <option value="Gujarati"> ગુજરાતી</option>
+            </select>
+        </div>
+
+    </nav>
+
+
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+        <div class="navLinks">
+            <a href="index.html" data-key="home" style="color: green; font-weight: bold; ">HOME</a>
+            <a href="fruits.html" data-key="fruits">FRUITS</a>
+            <a href="fertilizer.html" data-key="fertilizer">FERTILIZER</a>
+            <a href="about.html" data-key="about">ABOUT US</a>
+            <a href="contact.html" data-key="contact">CONTACT US</a>
+        </div> 
+    </header>
+
+
+
+    <!-- //slider -->
+
+    <div id="body">
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+
+                    <div class="content">
+                        <h1>Varmi Compost</h1>
+                        <p>
+                            Varmi compost is an organic fertilizer created by decomposing organic waste with the help of
+                            earthworms. These worms break down biodegradable materials, enriching the compost with
+                            essential nutrients that improve soil fertility. It enhances soil aeration, increases water
+                            retention, and promotes healthier plant growth without the use of harmful chemicals. Vermi
+                            composting is an eco-friendly and sustainable method of recycling kitchen scraps, garden
+                            waste, and agricultural residues into nutrient-rich manure, making it an excellent
+                            alternative to chemical fertilizers for organic farming and gardening.
+                        </p>
+                        <div class="btn">More about<span class="btn-border"></span></div>
+                    </div>
+
+                    <div class="image-container">
+                        <img class="item"
+                            src="img/compost/1.png"
+                            style="--i: 2" alt="" />
+
+                        <img class="item"
+                            src="img/compost/2.png"
+                            style="--i: 6" alt="" />
+
+                        <img class="item"
+                            src="img/compost/3.png"
+                            style="--i: 8" alt="" />
+
+                        <img class="item"
+                            src="img/compost/4.png"
+                            style="--i: 4" alt="" />
+
+                        <img class="item"
+                            src="img/compost/5.png"
+                            style="--i: 1" alt="" />
+
+                        <img class="item"
+                            src="img/compost/6.png"
+                            style="--i: 9" alt="" />
+
+                        <img class="item"
+                            src="img/compost/7.png"
+                            style="--i: 7" alt="" />
+
+                        <img class="item"
+                            src="img/compost/8.png"
+                            style="--i: 5" alt="" />
+
+                        <img class="item"
+                            src="img/compost/9.png"
+                            style="--i: 3" alt="" />
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="content">
+                        <h1>Fresh Mangoes</h1>
+                        <p>
+                            Mangoes 🥭 are delicious tropical fruits known for their sweet and juicy taste. 
+                            We export the finest quality mangoes, ensuring freshness and rich flavor in every bite. 
+                            Mangoes are loved worldwide and are a symbol of tropical delight.
+                        </p>
+                        <div class="btn">More about<span class="btn-border"></span></div>
+                    </div>
+                    
+
+                    <div class="image-container">
+                        <img class="item"
+                            src="img/mango_file/1.png"
+                            style="--i: 2" alt="" />
+
+                        <img class="item"
+                            src="img/mango_file/2.png"
+                            style="--i: 6" alt="" />
+
+                        <img class="item"
+                            src="img/mango_file/3.png"
+                            style="--i: 8" alt="" />
+
+                        <img class="item"
+                            src="img/mango_file/4.png"
+                            style="--i: 4" alt="" />
+
+                        <img class="item"
+                            src="img/mango_file/5.png"
+                            style="--i: 1" alt="" />
+
+                        <img class="item"
+                            src="img/mango_file/6.png"
+                            style="--i: 9" alt="" />
+
+                        <img class="item"
+                            src="img/mango_file/7.png"
+                            style="--i: 7" alt="" />
+
+                        <img class="item"
+                            src="img/mango_file/8.png"
+                            style="--i: 5" alt="" />
+
+                        <img class="item"
+                            src="img/mango_file/9.png"
+                            style="--i: 3" alt="" />
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="content">
+                        <h1>Premium Pomegranates</h1>
+                        <p>
+                            Pomegranates 🍎 are rich in antioxidants and known for their juicy, ruby-red seeds. 
+                            We export the best quality pomegranates, ensuring freshness and superior taste. 
+                            Loved for their health benefits and vibrant flavor, they are a symbol of purity and wellness.
+                        </p>
+                        <div class="btn">More about<span class="btn-border"></span></div>
+                    </div>
+                    
+
+                    <div class="image-container">
+                        <img class="item"
+                            src="img/pomegranate_file/1.png"
+                            style="--i: 2" alt="" />
+
+                        <img class="item"
+                            src="img/pomegranate_file/2.png"
+                            style="--i: 6" alt="" />
+
+                        <img class="item"
+                            src="img/pomegranate_file/3.png"
+                            style="--i: 8" alt="" />
+
+                        <img class="item"
+                            src="img/pomegranate_file/4.png"
+                            style="--i: 4" alt="" />
+
+                        <img class="item"
+                            src="img/pomegranate_file/5.png"
+                            style="--i: 1" alt="" />
+
+                        <img class="item"
+                            src="img/pomegranate_file/6.png"
+                            style="--i: 9" alt="" />
+
+                        <img class="item"
+                            src="img/pomegranate_file/7.png"
+                            style="--i: 7" alt="" />
+
+                        <img class="item"
+                            src="img/pomegranate_file/8.png"
+                            style="--i: 5" alt="" />
+
+                        <img class="item"
+                            src="img/pomegranate_file/9.png"
+                            style="--i: 3" alt="" />
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+
+<script>
+
+    //Navbar
+    function toggleMenu() {
+        let navLinks = document.querySelector(".navLinks");
+        if (navLinks.classList.contains("show")) {
+            navLinks.style.maxHeight = "0";
+            setTimeout(() => navLinks.classList.remove("show"), 500);
+        } else {
+            navLinks.classList.add("show");
+            navLinks.style.maxHeight = "300px";
+        }
+    }
+
+
+
+    //slider
+
+    var swiper = new Swiper(".swiper", {
+        effect: "slide",
+        speed: 900,
+        loop: true,
+        mousewheel: {
+            invert: false,
+            thresholdDelta: 50,
+            sensitivity: 1,
+        },
+    });
+
+   
+
+    // Language Translations
+    const translations = {
+        English: {
+            marquee1: "🍎 Fresh Fruits & 🌱 Organic Compost – Grow Healthy!",
+            marquee2: "🌿 Pure Compost & 🍊 Juicy Fruits – Naturally Best!",
+            marquee3: "🍏 Farm Fresh Fruits & 🌱 Rich Compost for You!",
+            marquee4: "🌱 Healthy Soil, 🍇 Healthy Life!",
+            marquee5: "🍉 Freshness & 🌿 Fertility in Every Bite!",
+            home: "HOME",
+            about: "ABOUT US",
+            dryFruits: "DRY FRUITS",
+            fruits: "FRUITS",
+            fertilizer: "FERTILIZER",
+            contact: "CONTACT US"
+        },
+
+        Hindi: {
+            marquee1: "🍎 ताजे फल और 🌱 जैविक खाद – स्वस्थ बनें!",
+            marquee2: "🌿 शुद्ध खाद और 🍊 रसदार फल – स्वाभाविक रूप से श्रेष्ठ!",
+            marquee3: "🍏 ताजा फार्म फल और 🌱 समृद्ध खाद आपके लिए!",
+            marquee4: "🌱 स्वस्थ मिट्टी, 🍇 स्वस्थ जीवन!",
+            marquee5: "🍉 ताजगी और 🌿 उर्वरता हर काट में!",
+            home: "होम",
+            about: "हमारे बारे में",
+            dryFruits: "सूखे मेवे",
+            fruits: "फल",
+            fertilizer: "उर्वरक",
+            contact: "संपर्क करें"
+        },
+        Gujarati: {
+            marquee1: "🍎 તાજા ફળ અને 🌱 ઓર્ગેનિક કોમ્પોસ્ટ – સ્વસ્થ રહો!",
+            marquee2: "🌿 શુદ્ધ કોમ્પોસ્ટ અને 🍊 રસદાર ફળ – સ્વાભાવિક શ્રેષ્ઠ!",
+            marquee3: "🍏 ફાર્મ તાજા ફળ અને 🌱 સમૃદ્ધ કોમ્પોસ્ટ તમારા માટે!",
+            marquee4: "🌱 આરોગ્યપ્રદ જમીન, 🍇 આરોગ્યપ્રદ જીવન!",
+            marquee5: "🍉 તાજગી અને 🌿 ઉર્વરતા દરેક બાઈટમાં!",
+            home: "હોમ",
+            about: "અમારા વિશે",
+            dryFruits: "શુકા ફળ",
+            fruits: "ફળ",
+            fertilizer: "ખાતર",
+            contact: "સંપર્ક કરો"
+        }
+    };
+
+    // Function to change language
+    function changeLanguage() {
+        let selectedLang = document.getElementById("languageSelect").value;
+
+        // Find all elements with `data-key`
+        document.querySelectorAll("[data-key]").forEach(element => {
+            let key = element.getAttribute("data-key"); // Get translation key
+            element.innerText = translations[selectedLang][key]; // Update text
+        });
+    }
+
+    // Attach event listener to language dropdown
+    document.getElementById("languageSelect").addEventListener("change", changeLanguage);
+
+
+</script>
+
+

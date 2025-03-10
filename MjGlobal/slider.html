@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Fruit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f8f9fa;
+        }
+        .game-container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            filter: blur(10px);
+            border-radius: 10px;
+        }
+        input {
+            margin-top: 15px;
+            padding: 10px;
+            width: 80%;
+            font-size: 16px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #message {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        #hint {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #6c757d;
+            font-style: italic;
+        }
+        #fruit-info {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #007bff;
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h2>Guess the Fruit 🍎</h2>
+        <img id="fruit-image" src="" alt="Guess the fruit">
+        <p id="hint"></p>
+        <input type="text" id="fruit-input" placeholder="Enter fruit name">
+        <button id="submit-btn">Submit</button>
+        <p id="message"></p>
+        <p id="fruit-info"></p> <!-- Added fruit info paragraph -->
+    </div>
+
+    <script>
+        const fruits = [
+            { name: "apple", image: "img/apple.png", hint: "It is red and keeps the doctor away!" },
+            { name: "banana", image: "banana.jpg", hint: "It is yellow and monkeys love it!" },
+            { name: "grapes", image: "grapes.jpg", hint: "They are small, round, and can be green or purple." },
+            { name: "mango", image: "mango.jpg", hint: "King of fruits, mostly found in summer!" }
+        ];
+
+        let currentFruitIndex = 0;
+
+        const fruitImage = document.getElementById("fruit-image");
+        const userInput = document.getElementById("fruit-input");
+        const submitBtn = document.getElementById("submit-btn");
+        const message = document.getElementById("message");
+        const hint = document.getElementById("hint");
+        const fruitInfo = document.getElementById("fruit-info");
+
+        function loadFruit() {
+            fruitImage.src = fruits[currentFruitIndex].image;
+            fruitImage.style.filter = "blur(10px)"; // Blur effect
+            userInput.value = "";
+            message.textContent = "";
+            fruitInfo.style.display = "none"; // Hide fruit info
+            hint.textContent = fruits[currentFruitIndex].hint;
+        }
+
+        submitBtn.addEventListener("click", () => {
+            const userGuess = userInput.value.trim().toLowerCase();
+            if (userGuess === fruits[currentFruitIndex].name) {
+                message.textContent = "Correct! 🎉";
+                fruitImage.style.filter = "blur(0px)"; // Remove blur
+                fruitInfo.textContent = `This is a ${fruits[currentFruitIndex].name}! 🍏 ${fruits[currentFruitIndex].hint}`;
+                fruitInfo.style.display = "block"; // Show fruit info
+
+                setTimeout(() => {
+                    currentFruitIndex = (currentFruitIndex + 1) % fruits.length;
+                    loadFruit();
+                }, 3000);
+            } else {
+                message.textContent = "Try Again! ❌";
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", loadFruit);
+    </script>
+</body>
+</html>
