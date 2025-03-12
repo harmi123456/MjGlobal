@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Kanit';
 }
 
 nav {
@@ -251,25 +252,41 @@ header {
 }
 
 
-/* //sec1 */
-
+/* //sec 1 */
 .sec1 {
+    position: relative;
     height: 500px;
-    background: linear-gradient(rgba(0, 0, 0, 0.128), rgba(0, 0, 0, 0.288)), url("img/compost_bag_1.jpg");
+    background: none; 
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+.sec1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("img/c_16.jpg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    border: 1px solid transparent;
+    filter: blur(8px); 
+    z-index: -1; 
+}
 
-    h1 {
-        position: relative;
-        font-size: 2.5rem;
-        font-weight: bold;
-        margin-top: 100px;
-        max-width: 700px;
-        line-height: 1.3;
-        color: white;
-    }
+.sec1 h1 {
+    font-weight: bold;
+    color: white;
+    font-size: 70px;
+    text-align: center;
+    letter-spacing: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    position: relative; /* Ensure text stays above the blurred background */
+    z-index: 1;
 }
 
 

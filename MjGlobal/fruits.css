@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Kanit';
 }
 
 nav {
@@ -264,6 +265,18 @@ header {
     align-items: center;
     justify-content: center;
 
+    h1{
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 150px;
+        font-weight: bold;
+        letter-spacing: 20px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
     video {
         height: 100%;
         filter: blur(5px) brightness(70%);
@@ -272,6 +285,38 @@ header {
 
     .video-container video:hover {
         filter: blur(0px) brightness(90%);
+    }
+}
+
+
+@media (max-width: 380px) {
+    .sec1{
+        h1{
+            font-size: 30px;
+            letter-spacing: 10px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .sec1{
+        overflow: hidden;
+        h1{
+            font-size: 40px;
+            letter-spacing: 10px;
+        }
+    }
+}
+
+
+
+@media (max-width:768px) {
+    .sec1{
+        overflow: hidden;
+        h1{
+            font-size: 100px;
+            letter-spacing: 10px;
+        }
     }
 }
 
