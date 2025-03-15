@@ -406,6 +406,8 @@ header {
 
     h1 {
         color: green;
+        font-family: 'Kanit';
+        font-weight: bold;
     }
 
     .pomegranate {

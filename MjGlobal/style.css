@@ -335,9 +335,8 @@ header {
         background-color: #f8f8f8;
     }
 
-    .why-choose-us h2 {
-        font-size: 100px;
-        margin-bottom: 20px;
+    .why-choose-us h1 {
+        color: #004b17;
         font-family: 'Kanit';
         font-weight: bold;
     }
