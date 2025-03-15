@@ -257,7 +257,7 @@ header {
 /* //sec1 */
 
 .sec1 {
-    height: 500px;
+    height: 400px;
     background: url('https://img.freepik.com/free-photo/pine-wood-texture_1194-5373.jpg?semt=ais_hybrid');
     background-size: cover;
     background-position: center;
@@ -303,6 +303,8 @@ header {
 
     h1 {
         color: #004b17;
+        font-family: 'Kanit';
+        font-weight: bold;
     }
 
     .category {
@@ -334,8 +336,10 @@ header {
     }
 
     .why-choose-us h2 {
-        font-size: 2rem;
+        font-size: 100px;
         margin-bottom: 20px;
+        font-family: 'Kanit';
+        font-weight: bold;
     }
 
     .features {
