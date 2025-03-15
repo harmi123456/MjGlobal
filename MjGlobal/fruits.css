@@ -127,7 +127,7 @@ header {
         .menu-icon {
             display: block;
         }
-        
+
         .navLinks {
             display: flex;
             z-index: 100;
@@ -150,7 +150,7 @@ header {
             display: flex;
         }
 
-       
+
 
     }
 }
@@ -265,7 +265,7 @@ header {
     align-items: center;
     justify-content: center;
 
-    h1{
+    h1 {
         position: absolute;
         top: 55%;
         left: 50%;
@@ -290,8 +290,8 @@ header {
 
 
 @media (max-width: 380px) {
-    .sec1{
-        h1{
+    .sec1 {
+        h1 {
             font-size: 30px;
             letter-spacing: 10px;
         }
@@ -299,9 +299,10 @@ header {
 }
 
 @media (max-width: 480px) {
-    .sec1{
+    .sec1 {
         overflow: hidden;
-        h1{
+
+        h1 {
             font-size: 40px;
             letter-spacing: 10px;
         }
@@ -311,9 +312,10 @@ header {
 
 
 @media (max-width:768px) {
-    .sec1{
+    .sec1 {
         overflow: hidden;
-        h1{
+
+        h1 {
             font-size: 100px;
             letter-spacing: 10px;
         }
@@ -565,4 +567,65 @@ header {
             width: 100%;
         }
     }
+}
+
+
+
+
+/* progress circle */
+
+.progress-circle-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-circle {
+    width: 80px;
+    height: 80px;
+}
+
+.progress-circle-bar {
+    fill: none;
+    stroke: black;
+    stroke-width: 5;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    transition: stroke-dashoffset 0.3s ease;
+}
+
+.progress-background {
+    fill: transparent;
+    stroke: #ededed;
+    stroke-width: 5;
+    stroke-dasharray: none;
+}
+
+
+.scroll-to-top {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.scroll-to-top svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    stroke: white;
+    transition: all 0.1s ease;
 }
