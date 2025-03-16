@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -259,80 +258,110 @@ header {
 
 
 
-.container {
+
+
+
+
+
+.form {
+    height: 700px;
+    background: url('img/fruit2.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
-    background: white;
     justify-content: center;
-    align-items: center;    
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    .glass-effect {
+        width: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        position: relative;
+        z-index: 1;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+    }
+
+    label {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    .submit_btn {
+        height: 50px;
+        margin: 10px;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        letter-spacing: 3px;
+        font-weight: bold;
+        width: 150px;
+        color: white;
+        background-color: #218838;
+    }
+
+    .submit_btn:hover {
+        background-color: #0a2410;
+        letter-spacing: 8px;
+        transition: 1s;
+    }
+
 }
-.form-container {
-    flex: 1;
-    padding-right: 20px;
-}
-.image-container img {
-    width: 150px;
-    height: auto;
-    border-radius: 10px;
-}
-h2 {
-    text-align: center;
-    color: #4CAF50;
-}
-input, textarea {
+
+.form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-button {
-    width: 100%;
-    padding: 10px;
-    background: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
-}
-button:hover {
-    background: #45a049;
+    height: 100%;
+    background: inherit;
+    filter: blur(8px);
+    z-index: 0;
 }
 
 
 
+@media (max-width: 768px) {
+    .form{
+        .glass-effect{
+            width: 100%;
+        }
+    }
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.map{
+.map {
     height: 500px;
     width: 100%;
-    border: 1px solid;
-    iframe{
+
+    iframe {
         height: 100%;
         width: 100%;
     }

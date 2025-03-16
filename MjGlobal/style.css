@@ -317,16 +317,48 @@ header {
 
         .fruit {
             height: 300px;
+            margin: 10px;
             border-radius: 10px;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            overflow: hidden;
+            background-color: black;
+
             img {
                 height: 100%;
                 border-radius: 10px;
                 width: 100%;
             }
         }
+
+        .fruit:hover img {
+            transform: scale(1.1);
+            transition: 1s;
+            opacity: 0.5;
+        }
     }
 }
+
+
+@media (max-width: 480px) {
+    .sec2{
+        .category{
+            .fruit{
+                height: 200px;
+            }
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .sec2{
+        .category{
+            .fruit{
+                height: 150px;
+            }
+        }
+    }
+}
+
 
 
 /* //sec3 */
@@ -501,18 +533,18 @@ header {
 
 
 
-/* //sec5 */
+/* //sec6 */
 
-.sec6 {
-    display: flex;
-    flex-wrap: wrap;
-
-    /* height: 700px; */
-    img {
-        width: 50%;
+.sec6{
+    height: 700px;
+    /* background: url('img/tree.jpg'); */
+    /* background-size: cover;
+    background-position: center; */
+    img{
+        height: 100%;
+        width: 100%;
     }
 }
-
 
 
 
