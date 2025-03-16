@@ -256,7 +256,7 @@ header {
 
 
 .sec1 {
-    height: 500px;
+    height: 400px;
     width: 100%;
     overflow: hidden;
     background: #f7f7f7;
@@ -267,7 +267,7 @@ header {
 
     h1 {
         position: absolute;
-        top: 50%;
+        top: 42%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: white;

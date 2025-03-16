@@ -255,7 +255,7 @@ header {
 /* //sec 1 */
 .sec1 {
     position: relative;
-    height: 500px;
+    height: 400px;
     background: none;
     border: 1px solid transparent;
     display: flex;
