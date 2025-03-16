@@ -284,6 +284,7 @@ header {
     font-size: 70px;
     text-align: center;
     letter-spacing: 20px;
+    font-family: 'kanit';
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
     position: relative;
     /* Ensure text stays above the blurred background */
