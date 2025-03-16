@@ -305,6 +305,7 @@ header {
         color: #004b17;
         font-family: 'Kanit';
         font-weight: bold;
+
     }
 
     .category {
@@ -316,9 +317,11 @@ header {
 
         .fruit {
             height: 300px;
-
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             img {
                 height: 100%;
+                border-radius: 10px;
                 width: 100%;
             }
         }
