@@ -265,13 +265,12 @@ header {
     align-items: center;
     justify-content: center;
     font-family: 'Kanit';
-    font-weight: bold;
     flex-direction: column;
     letter-spacing: 5px;
 
     h1 {
         font-size: 100px;
-        font-size: 'kanit';
+        font-family: 'Kanit';
         color: #004b17;
     }
 }
