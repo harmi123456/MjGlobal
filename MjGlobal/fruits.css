@@ -258,35 +258,22 @@ header {
 .sec1 {
     height: 400px;
     width: 100%;
-    overflow: hidden;
-    background: #f7f7f7;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: url('img/fruit-back.jpg');
+    background-size: cover;
+    background-position: center;
 
     h1 {
-        position: absolute;
-        top: 42%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         color: white;
         font-size: 100px;
         font-family: 'Kanit';
-        /* font-weight: bold; */
         letter-spacing: 20px;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     }
 
-    video {
-        height: 100%;
-        filter: blur(5px) brightness(70%);
-        transition: filter 0.5s ease-in-out;
-    }
-
-    .video-container video:hover {
-        filter: blur(0px) brightness(90%);
-    }
+   
 }
 
 
@@ -310,8 +297,6 @@ header {
 
         h1 {
             font-size: 50px;
-            top: 50%;
-            left: 50%;
             text-align: center;
             letter-spacing: 10px;
         }
@@ -402,7 +387,11 @@ header {
     }
 }
 
-
+@media (max-width: 556px) {
+    .fun-fruit-facts{
+        display: none;
+    }
+}
 
 .sec4 {
     height: auto;
@@ -638,4 +627,20 @@ header {
     height: 20px;
     stroke: white;
     transition: all 0.1s ease;
+}
+
+.whatsapp{
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
