@@ -339,10 +339,14 @@ header {
 
     .slide {
         height: auto;
+        height: 300px;
         text-align: center;
         background-color: whitesmoke;
         padding: 10px;
         margin: 0 10px;
+        img{
+            height: 80%;
+        }
     }
 }
 
@@ -420,6 +424,15 @@ header {
 
         .content {
             width: 45%;
+            .pom_btn{
+                width: 200px;
+                color: white;
+                font-family: 'Kanit';
+                border: 1px transparent;
+                background-color: green;
+                height: 50px;
+                letter-spacing: 2px;
+            }
         }
     }
 }
