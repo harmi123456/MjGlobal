@@ -274,20 +274,18 @@ header {
     background: url("img/c_16.jpg");
     background-size: cover;
     background-position: center;
-    filter: blur(8px);
     z-index: -1;
 }
 
 .sec1 h1 {
     font-weight: bold;
     color: white;
-    font-size: 70px;
+    font-size: 100px;
+    font-size: 'kanit';
     text-align: center;
     letter-spacing: 20px;
-    font-family: 'kanit';
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
     position: relative;
-    /* Ensure text stays above the blurred background */
     z-index: 1;
 }
 
@@ -303,6 +301,18 @@ header {
         max-width: 100%;
     }
 }
+
+
+@media (max-width:480px) {
+    .sec1 {
+        h1 {
+            font-size: 50px;
+            letter-spacing: 10px;
+        }
+    }
+}
+
+
 
 
 /* //sec2 */

@@ -271,6 +271,7 @@ header {
 
     h1 {
         font-size: 100px;
+        font-size: 'kanit';
         color: #004b17;
     }
 }
@@ -279,17 +280,11 @@ header {
     .sec1 {
         h1 {
             font-size: 50px;
-        }
-    }
-}
-
-@media (max-width: 380px) {
-    .sec1 {
-        h1 {
             text-align: center;
         }
     }
 }
+
 
 
 /* //sec2 */

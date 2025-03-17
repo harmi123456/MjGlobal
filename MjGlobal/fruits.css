@@ -271,7 +271,8 @@ header {
         left: 50%;
         transform: translate(-50%, -50%);
         color: white;
-        font-size: 150px;
+        font-size: 100px;
+        font-size: 'kanit';
         font-weight: bold;
         letter-spacing: 20px;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
@@ -289,27 +290,6 @@ header {
 }
 
 
-@media (max-width: 380px) {
-    .sec1 {
-        h1 {
-            font-size: 30px;
-            letter-spacing: 10px;
-        }
-    }
-}
-
-@media (max-width: 480px) {
-    .sec1 {
-        overflow: hidden;
-
-        h1 {
-            font-size: 40px;
-            letter-spacing: 10px;
-        }
-    }
-}
-
-
 
 @media (max-width:768px) {
     .sec1 {
@@ -321,6 +301,34 @@ header {
         }
     }
 }
+
+
+
+@media (max-width: 480px) {
+    .sec1 {
+        overflow: hidden;
+
+        h1 {
+            font-size: 50px;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            letter-spacing: 10px;
+        }
+    }
+}
+
+
+
+@media (max-width: 380px) {
+    .sec1 {
+        h1 {
+            font-size: 50px;
+            letter-spacing: 10px;
+        }
+    }
+}
+
 
 
 

@@ -274,15 +274,14 @@ header {
     background: url("img/mug.png");
     background-size: cover;
     background-position: center;
-    /* filter: blur(8px); */
-    filter: blur(5px) brightness(70%);
     z-index: -1;
 }
 
 .sec1 h1 {
     font-weight: bold;
     color: white;
-    font-size: 70px;
+    font-size: 100px;
+    font-size: 'kanit';
     text-align: center;
     letter-spacing: 20px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
@@ -300,6 +299,16 @@ header {
     .sec1 h1 {
         font-size: 2rem;
         max-width: 100%;
+    }
+}
+
+
+@media (max-width:480px) {
+    .sec1 {
+        h1 {
+            font-size: 50px;
+            letter-spacing: 10px;
+        }
     }
 }
 
@@ -441,230 +450,471 @@ header {
 }
 
 @media (max-width: 768px) {
-    .sec3{
+    .sec3 {
         flex-direction: column;
-        .info{
+
+        .info {
             width: 100%;
         }
-        .about_logo{
+
+        .about_logo {
             width: 100%;
         }
     }
 }
+
 
 /* //sec4 */
 
 .sec4{
-    height: 1000px;
+    height: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #efeeea;
-    font-weight: bold;
-
-    .right{
-        height: 80%;
-        width: 30%;
-        .step1{
-            padding: 10px;
-            border-radius: 20px;
-            background-color: #98bd98;
-            /* color: white; */
-            width: 92%;
-            line-height: 25px;
-        }
-
-        .step3{
-            /* border: 2px solid; */
-            padding: 10px;
-            border-radius: 20px;
-            background-color: #008201;
-            color: white;
-            position: relative;
-            top: 100px;
-            width: 92%;
-            line-height: 25px;
-        }
-
-        .step5{
-            padding: 10px;
-            border-radius: 20px;
-            background-color: #679267;
-            position: relative;
-            top: 200px;
-            width: 92%;
-            line-height: 25px;
-        }
-    }
-
-
-    .center{
-        height: 80%;
-        width: 10%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    .steps1{
+        height: auto;
         display: flex;
-        /* justify-content: center; */
-        flex-direction: column;
-        align-items: center;
-        .line1{
-            width: 2px;
-            height: 140px;
+        margin: 10px;
+
+        .num1{
+            width: 10%;
             border: 2px solid green;
-        }
-        .round{
-            height: 40px;
-            width: 40px;
-            border: 1px solid;
-            border-radius: 50%;
             background-color: green;
-            color: white;
-            font-size: 25px;
             display: flex;
             align-items: center;
             justify-content: center;
-            i {
-                transform: rotate(-25deg);
-            }
-        }
-    }
-
-
-    .left{
-        height: 80%;
-        width: 30%;
-        .step2{
-            /* border: 2px solid; */
-            padding: 10px;
-            position: relative;
-            top: 100px;
-            border-radius: 20px;
-            background-color: #679267;
-            /* color: white; */
-            width: 92%;
-            line-height: 25px;
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+            font-family: 'kanit';
         }
 
-        .step4{
-            /* border: 2px solid; */
+        .des1{
+            width: 90%;
+            border: 2px solid green;
+            border-right: 5px solid green;
+            border-left: 5px solid green;
             padding: 10px;
-            border-radius: 20px;
-            background-color: #679267;
-            position: relative;
-            top: 200px;
-            width: 92%;
+            font-family: 'kanit';
             line-height: 25px;
-        }
-
-        .step6{
-            /* border: 2px solid; */
-            padding: 10px;
-            border-radius: 20px;
-            background-color: #679267;
             position: relative;
-            top: 300px;
-            width: 92%;
-            line-height: 25px;
+            overflow: hidden; /* Extra content hide hoga */
+            z-index: 1;
         }
     }
 }
 
-@media (max-width: 768px) {
-    .sec4{
-        flex-direction: column;
+ .steps1 .des1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    transition: left 0.5s ease-in-out;
+    z-index: -1; 
+}
+
+.steps1:hover .des1::before {
+    left: 0; 
+}
+
+
+.steps1:hover .num1 {
+    background-color: white;
+    color: green;
+    transition: 1s;
+}
+.steps1:hover .des1 {
+    color: white;
+    transition: color 0.5s ease-in-out;
+}
+
+
+
+
+
+/* ///second step */
+
+.sec4{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    .steps2{
         height: auto;
-        .right{
-            width: 50%;
-            padding: 20px;
-            .step3{
-                top: 10px;
-            }
-            .step5{
-                top: 20px;
-            }
+        display: flex;
+        margin: 10px;
+
+        .num2{
+            width: 10%;
+            border: 2px solid green;
+            background-color: green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+            font-family: 'kanit';
         }
 
-        .center{
-            display: none;
-        }
-
-        .left{
-            width: 50%;
-            padding: 20px;
-            .step2{
-                top: 0;
-            }
-            .step4{
-                top: 10px;
-            }
-            .step6{
-                top: 20px;
-            }
+        .des2{
+            width: 90%;
+            border: 2px solid green;
+            border-right: 5px solid green;
+            border-left: 5px solid green;
+            padding: 10px;
+            font-family: 'kanit';
+            line-height: 25px;
+            position: relative;
+            overflow: hidden; /* Extra content hide hoga */
+            z-index: 1;
         }
     }
 }
 
+.steps2 .des2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%; 
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    transition: left 0.5s ease-in-out;
+    z-index: -1; 
+}
 
-@media (max-width: 480px) {
-    .sec4{
-        flex-direction: column;
+.steps2:hover .des2::before {
+    left: 0; 
+}
+
+
+.steps2:hover .num2 {
+    background-color: white;
+    color: green;
+    transition: 1s;
+}
+.steps2:hover .des2 {
+    color: white;
+    transition: color 0.5s ease-in-out;
+}
+
+
+
+/* //third stepp */
+
+.sec4{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    .steps3{
         height: auto;
-        .right{
-            width: 100%;
-            padding: 20px;
-            .step3{
-                top: 10px;
-            }
-            .step5{
-                top: 20px;
-            }
+        display: flex;
+        margin: 10px;
+
+        .num3{
+            width: 10%;
+            border: 2px solid green;
+            background-color: green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+            font-family: 'kanit';
         }
 
-        .center{
-            display: none;
-        }
-
-        .left{
-            width: 100%;
-            padding: 20px;
-            .step2{
-                top: 0;
-            }
-            .step4{
-                top: 10px;
-            }
-            .step6{
-                top: 20px;
-            }
+        .des3{
+            width: 90%;
+            border: 2px solid green;
+            border-right: 5px solid green;
+            border-left: 5px solid green;
+            padding: 10px;
+            font-family: 'kanit';
+            line-height: 25px;
+            position: relative;
+            overflow: hidden; /* Extra content hide hoga */
+            z-index: 1;
         }
     }
 }
 
+.steps3 .des3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    transition: left 0.5s ease-in-out;
+    z-index: -1; 
+}
 
-.matter{
+.steps3:hover .des3::before {
+    left: 0; 
+}
+
+
+.steps3:hover .num3 {
+    background-color: white;
+    color: green;
+    transition: 1s;
+}
+.steps3:hover .des3 {
+    color: white;
+    transition: color 0.5s ease-in-out;
+}
+
+
+
+/* //four step */
+
+.sec4{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    .steps4{
+        height: auto;
+        display: flex;
+        margin: 10px;
+
+        .num4{
+            width: 10%;
+            border: 2px solid green;
+            background-color: green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+            font-family: 'kanit';
+        }
+
+        .des4{
+            width: 90%;
+            border: 2px solid green;
+            border-right: 5px solid green;
+            border-left: 5px solid green;
+            padding: 10px;
+            font-family: 'kanit';
+            line-height: 25px;
+            position: relative;
+            overflow: hidden; /* Extra content hide hoga */
+            z-index: 1;
+        }
+    }
+}
+
+.steps4 .des4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%; 
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    transition: left 0.5s ease-in-out;
+    z-index: -1; 
+}
+
+.steps4:hover .des4::before {
+    left: 0; 
+}
+
+
+.steps4:hover .num4 {
+    background-color: white;
+    color: green;
+    transition: 1s;
+}
+.steps4:hover .des4 {
+    color: white;
+    transition: color 0.5s ease-in-out;
+}
+
+
+
+
+/* //five step */
+
+.sec4{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    .steps5{
+        height: auto;
+        display: flex;
+        margin: 10px;
+
+        .num5{
+            width: 10%;
+            border: 2px solid green;
+            background-color: green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+            font-family: 'kanit';
+        }
+
+        .des5{
+            width: 90%;
+            border: 2px solid green;
+            border-right: 5px solid green;
+            border-left: 5px solid green;
+            padding: 10px;
+            font-family: 'kanit';
+            line-height: 25px;
+            position: relative;
+            overflow: hidden; /* Extra content hide hoga */
+            z-index: 1;
+        }
+    }
+}
+
+.steps5 .des5::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    transition: left 0.5s ease-in-out;
+    z-index: -1; 
+}
+
+.steps5:hover .des5::before {
+    left: 0; 
+}
+
+
+.steps5:hover .num5 {
+    background-color: white;
+    color: green;
+    transition: 1s;
+}
+.steps5:hover .des5 {
+    color: white;
+    transition: color 0.5s ease-in-out;
+}
+
+
+
+/* //six step */
+
+.sec4{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    .steps6{
+        height: auto;
+        display: flex;
+        margin: 10px;
+
+        .num6{
+            width: 10%;
+            border: 2px solid green;
+            background-color: green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+            font-family: 'kanit';
+        }
+
+        .des6{
+            width: 90%;
+            border: 2px solid green;
+            border-right: 5px solid green;
+            border-left: 5px solid green;
+            padding: 10px;
+            font-family: 'kanit';
+            line-height: 25px;
+            position: relative;
+            overflow: hidden; /* Extra content hide hoga */
+            z-index: 1;
+        }
+    }
+}
+
+.steps6 .des6::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%; 
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    transition: left 0.5s ease-in-out;
+    z-index: -1; 
+}
+
+.steps6:hover .des6::before {
+    left: 0; 
+}
+
+
+.steps6:hover .num6 {
+    background-color: white;
+    color: green;
+    transition: 1s;
+}
+.steps6:hover .des6 {
+    color: white;
+    transition: color 0.5s ease-in-out;
+}
+
+
+
+
+
+
+
+
+.matter {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    h2{
+
+    h2 {
         font-weight: bold;
         font-family: 'kanit';
     }
-    ul{
+
+    ul {
         list-style: none;
     }
-    .mat{
+
+    .mat {
         width: 50%;
         padding: 20px;
+        margin: 10px;
         border-radius: 20px;
         background-color: white;
-        margin-top: -50px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 }
 
 
 @media (max-width: 768px) {
-    .matter{
-        .mat{
+    .matter {
+        .mat {
             margin-top: 20px;
             width: 100%;
         }
