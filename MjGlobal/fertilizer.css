@@ -376,6 +376,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     /* background:linear-gradient(rgba(0, 0, 0, 0.306),rgba(0, 0, 0, 0.333)), url('img/Elements\ 2.jpg');
     background-size: cover; */
     padding: 20px;
@@ -383,6 +384,7 @@ header {
     .box {
         width: 400px;
         height: 600px;
+        margin: 20px;
         border-radius: 10px;
         background-color: white;
         border: 2px solid #165B12;
@@ -433,6 +435,12 @@ header {
 
 }
 
+
+@media (max-width: 768px) {
+    .elements{
+        height: auto;
+    }
+}
 
 /* //sec3 */
 .sec3 {
