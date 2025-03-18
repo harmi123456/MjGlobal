@@ -41,20 +41,19 @@ nav {
 
 
 
+
 header {
-    height: 60px;
+    height: 70px;
     width: 100%;
-    border: 2px solid;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    border-color: white;
     position: relative;
 
     .logo {
         height: 100%;
-        width: 4%;
-        margin-left: -100px;
+        width: 5%;
+        /* margin-left: -100px; */
 
         img {
             height: 100%;
@@ -108,9 +107,22 @@ header {
         font-size: 24px;
         cursor: pointer;
         position: absolute;
-        right: 15px;
+        left: 15px;
     }
 
+    .icons {
+        width: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 20px;
+        position: absolute;
+        right: 15px;
+
+        a {
+            color: green;
+        }
+    }
 }
 
 
@@ -135,7 +147,7 @@ header {
             align-items: flex-start;
             padding: 10px;
             position: absolute;
-            top: 60px;
+            top: 80px;
             left: 0;
             width: 100%;
             background: white;
@@ -150,7 +162,9 @@ header {
             display: flex;
         }
 
-
+        .icons{
+            width: 20%;
+        }
 
     }
 }
@@ -172,7 +186,7 @@ header {
             align-items: flex-start;
             padding: 10px;
             position: absolute;
-            top: 60px;
+            top: 70px;
             left: 0;
             width: 100%;
             background: white;
@@ -195,6 +209,9 @@ header {
             display: block;
         }
 
+        .icons{
+            width: 25%;
+        }
     }
 }
 
