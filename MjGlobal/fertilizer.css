@@ -162,7 +162,7 @@ header {
             display: flex;
         }
 
-        .icons{
+        .icons {
             width: 20%;
         }
 
@@ -209,7 +209,7 @@ header {
             display: block;
         }
 
-        .icons{
+        .icons {
             width: 25%;
         }
     }
@@ -388,14 +388,12 @@ header {
 
 /* //elemnts */
 
-.elements{
+.elements {
     height: 800px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    /* background:linear-gradient(rgba(0, 0, 0, 0.306),rgba(0, 0, 0, 0.333)), url('img/Elements\ 2.jpg');
-    background-size: cover; */
     padding: 20px;
 
     .box {
@@ -418,23 +416,28 @@ header {
             font-weight: bold;
             padding: 10px;
         }
-    
+
         .box-content {
             line-height: 20px;
             font-family: "Kanit";
             font-size: 16px;
             color: #333;
         }
-    
+
     }
 
-    .el_img{
+    .el_img {
         height: 550px;
         width: 400px;
         border-radius: 10px;
+        background: linear-gradient(rgba(0, 0, 0, 0.306), rgba(0, 0, 0, 0.333)), url('img/Elements\ 2.jpg');
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
         transition: transform 0.3s ease-in-out;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-        img{
+
+        img {
             border-radius: 10px;
             height: 100%;
             width: 100%;
@@ -451,22 +454,31 @@ header {
 
 }
 
+.elements:hover img {
+    margin-left: -400px;
+    transition: 1s;
+}
+
+
 
 @media (max-width: 768px) {
-    .elements{
+    .elements {
         height: auto;
-        .box{
+
+        .box {
             height: 450px;
-            .box-content{
-               line-height: 12px;
+
+            .box-content {
+                line-height: 12px;
             }
         }
-        .el_img{
+
+        .el_img {
             height: 450px;
             width: 90%;
         }
     }
-   
+
 }
 
 /* //sec3 */
@@ -503,6 +515,18 @@ header {
             height: 100%;
         }
     }
+}
+
+
+
+/* //sec4 */
+.sec4 {
+    height: 600px;
+    background: url('img/fruit5.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 
@@ -781,7 +805,7 @@ header {
     transition: all 0.1s ease;
 }
 
-.whatsapp{
+.whatsapp {
     position: fixed;
     bottom: 10px;
     left: 10px;
