@@ -73,7 +73,18 @@
 
         <div class="navLinks">
             <a href="index.html" data-key="home">HOME</a>
-            <a href="fruits.html" data-key="fruits" style="color: green; font-weight: bold;">FRUITS</a>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">
+                    <li onclick="navigateTo('fruits.html')">FRUITS</li>
+                </button>
+                <ul class="dropdown-menu">
+                    <li onclick="navigateTo('pomegranet.html')" style="color: green; font-weight: bold;">Pomegranate
+                    </li>
+                    <li onclick="navigateTo('mango.html')">Mango</li>
+                </ul>
+            </div>
+
             <a href="fertilizer.html" data-key="fertilizer">FERTILIZER</a>
             <a href="about.html" data-key="about">ABOUT US</a>
             <a href="contact.html" data-key="contact">CONTACT US</a>
@@ -554,6 +565,11 @@
 
 
 <script>
+
+    //dropdown
+    function navigateTo(url) {
+        window.location.href = url;
+    }
 
     //apple svg
 

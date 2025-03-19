@@ -76,7 +76,17 @@
 
         <div class="navLinks">
             <a href="index.html" data-key="home">HOME</a>
-            <a href="fruits.html" data-key="fruits">FRUITS</a>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">
+                    <li onclick="navigateTo('fruits.html')">FRUITS</li>
+                </button>
+                <ul class="dropdown-menu">
+                    <li onclick="navigateTo('pomegranet.html')">Pomegranate</li>
+                    <li onclick="navigateTo('mango.html')">Mango</li>
+                </ul>
+            </div>
+
             <a href="fertilizer.html" data-key="fertilizer" style="color: green; font-weight: bold;">FERTILIZER</a>
             <a href="about.html" data-key="about">ABOUT US</a>
             <a href="contact.html" data-key="contact">CONTACT US</a>
@@ -148,7 +158,7 @@
         </div>
 
         <div class="el_img">
-            <img src="img/Elements1.jpg" alt="">
+            <img src="img/Elements 2.jpg" alt="">
         </div>
 
 
@@ -174,13 +184,14 @@
     </div>
 
     <!-- //sec6 -->
-        
+
     <div class="container-fluid sec4"></div>
 
     <!-- //sec3 -->
 
     <div class="container-fluid sec3">
-        <div class="content ms-lg-5 mt-5 mb-5 ms-sm-0 ms-0 ">
+
+        <div class="content ms-lg-5 ms-sm-0 ">
             <h1 class="ms-2">Why Our Compost is a Game Changer ?</h1>
             <ul>
                 <li> Boosts Crop Yield Naturally</li>
@@ -191,36 +202,10 @@
             </ul>
         </div>
 
-        <div class="icons">
-            <img src="https://cdn-icons-png.flaticon.com/256/10776/10776017.png" alt="">
-            <!-- <img src="https://cdn-icons-png.flaticon.com/256/10826/10826970.png" alt="">
-            <img src="https://cdn-icons-gif.flaticon.com/12322/12322051.gif" alt=""> -->
-        </div>
     </div>
 
 
-    <!-- //sec5 -->
 
-    <div class="container sec5 mt-5">
-        <div class="compost">
-            <div class="c_bag">
-                <img src="img/c_2.jpg" alt="">
-            </div>
-            <div class="c_bag">
-                <img src="img/c_1.jpg" alt="">
-            </div>
-            <div class="c_bag">
-                <img src="img/c_5.jpg" alt="">
-            </div>
-            <div class="c_bag">
-                <img src="img/c_3.jpg" alt="">
-            </div>
-            <div class="c_bag">
-                <img src="img/c_4.jpg" alt="">
-            </div>
-
-        </div>
-    </div>
 
 
     <!-- //footer -->
@@ -331,6 +316,11 @@
 
 <script>
 
+    //dropdown
+    function navigateTo(url) {
+        window.location.href = url;
+    }
+
     //whats app
 
     document.querySelector(".whatsapp").addEventListener("click", function () {
@@ -440,7 +430,8 @@
     }
 
     // Attach event listener to language dropdown
-    document.getElementById("languageSelect").addEventListener("change", changeLanguage);
+
+    // document.getElementById("languageSelect").addEventListener("change", changeLanguage);
 
 
 </script>

@@ -73,7 +73,17 @@
 
         <div class="navLinks">
             <a href="index.html" data-key="home">HOME</a>
-            <a href="fruits.html" data-key="fruits">FRUITS</a>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">
+                    <li onclick="navigateTo('fruits.html')">FRUITS</li>
+                </button>
+                <ul class="dropdown-menu">
+                    <li onclick="navigateTo('pomegranet.html')">Pomegranate</li>
+                    <li onclick="navigateTo('mango.html')">Mango</li>
+                </ul>
+            </div>
+
             <a href="fertilizer.html" data-key="fertilizer">FERTILIZER</a>
             <a href="about.html" data-key="about" style="color: green; font-weight: bold;">ABOUT US</a>
             <a href="contact.html" data-key="contact">CONTACT US</a>
@@ -146,7 +156,7 @@
     <div class=" container part2  mb-5 mt-5 ">
 
         <div class="content2">
-            <h2><b>What Makes MJ Global Exim Stand Out?</b></h2>
+            <h2><b>What Makes MJ Global Exim Stand Out ?</b></h2>
 
             <ul>
                 <li><b>Top-Quality Organic Compost</b> – Enriches soil, boosts yield, and promotes sustainable
@@ -159,7 +169,7 @@
 
             </ul>
 
-        
+
             <p>By choosing <b>MJ Global Exim</b>, you get <b>India’s finest compost and fresh fruits</b>, ensuring
                 <b>maximum freshness, sustainability, and premium quality.</b>
             </p>
@@ -488,6 +498,11 @@
 
 
 <script>
+
+    //dropdown
+    function navigateTo(url) {
+        window.location.href = url;
+    }
 
     //whats app
 
