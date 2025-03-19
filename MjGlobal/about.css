@@ -335,16 +335,10 @@ header {
 
 .sec2 {
     display: flex;
-    justify-content: center;
 
     .cm_content {
         height: auto;
-        width: 78%;
-        z-index: 5;
-        padding: 15px;
-        /* background-color:#efeeea; */
         background: white;
-        border-radius: 20px;
 
         .name {
             display: flex;
@@ -402,6 +396,14 @@ header {
     }
 }
 
+.cm_img {
+    height: 500px;
+    width: 100%;
+    background: url('img/mj\ global\ about.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
 .part2{
     display: flex;
@@ -409,15 +411,7 @@ header {
     flex-wrap: wrap;
     height: auto;
 
-    .cm_img {
-        height: auto;
-        width: 40%;
-        border-radius: 0px 20px 20px 0;
-        margin-left: -200px;
-        background: url('img/mj\ global\ about.png');
-        background-size: cover;
-        background-position: center;
-    }
+
 
     .content2{
         padding: 15px;
