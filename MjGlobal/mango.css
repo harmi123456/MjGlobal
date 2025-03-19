@@ -321,7 +321,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('img/fruit1.jpg');
+    background: url('img/fruit9.jpg');
     background-size: cover;
     background-position: center;
     filter: blur(10px);
@@ -364,14 +364,14 @@ header {
 
 /* //sec2 */
 
-.pomegranate-varieties {
+.mango-varieties {
     text-align: center;
     padding: 50px 20px;
-    background: #fffaf0;
+    background: #FFF8DC;
 
     h2 {
         font-size: 32px;
-        color: #b22222;
+        color: #DAA520;
         margin-bottom: 20px;
     }
 
@@ -401,12 +401,12 @@ header {
 
     .variety-card h3 {
         margin: 15px 0 10px;
-        color: #b22222;
+        color: #8B4513;
         font-size: 22px;
     }
 
     .variety-card p {
-        color: #555;
+        color: #654321;
         font-size: 16px;
     }
 
@@ -490,10 +490,13 @@ header {
         flex-direction: column;
 
         h1 {
-            color: #b22222;
+            color: #DAA520;
             font-family: 'Kanit';
             font-weight: bold;
             font-size: 3rem;
+        }
+        p{
+            color: #654321;
         }
     }
 
@@ -541,6 +544,12 @@ header {
             width: 380px;
             margin: 10px;
             padding: 5px;
+            h2{
+                color: #8B4513;
+            }
+            p{
+                color: #654321;
+            }
         }
 
         .pom_img1 {
@@ -550,6 +559,7 @@ header {
             img {
                 height: 100%;
                 width: 100%;
+                transform: rotateX('180deg');
             }
         }
 
@@ -571,7 +581,7 @@ header {
     h1 {
         font-size: 50px;
         text-align: center;
-        color: #b22222;
+        color: #DAA520;
     }
 
     .container {
@@ -612,7 +622,7 @@ header {
     }
 
     .card-front {
-        background-color: #fff;
+        background-color: #654321;
     }
 
     .card-front img {
@@ -621,7 +631,7 @@ header {
     }
 
     .card-back {
-        background-color: #d7263d;
+        background-color: #654321;
         color: white;
         transform: rotateY(180deg);
         text-align: center;
@@ -644,7 +654,7 @@ header {
 
 .sec6 {
     height: 500px;
-    background: url('img/fruit4.jpg');
+    background: url('img/fruit8.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
