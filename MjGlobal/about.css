@@ -406,17 +406,9 @@ header {
 }
 
 .part2{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     height: auto;
 
-
-
     .content2{
-        padding: 15px;
-        width: 50%;
-        margin-left: 50px;
         ul {
             height: auto;
             list-style: none;
@@ -447,22 +439,14 @@ header {
     }
 }
 
-.part2:hover .cm_img{
-    transform: scale(1.1);
-    transition: 1s;
-}
 
 
 @media (max-width: 768px) {
     .part2{
-        .cm_img{
-            width: 100%;
-        }
+        
         .content2{
             width: 100%;
-            ul li{
-                padding-left: 0px;
-            }
+           
         }
     }
 }
