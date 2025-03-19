@@ -337,20 +337,6 @@ header {
     display: flex;
     justify-content: center;
 
-    .cm_img {
-        height: 300px;
-        width: 22%;
-
-        img {
-            height: 100%;
-            width: 100%;
-            border-radius: 20px;
-            position: relative;
-            left: 20px;
-            top: -20px;
-        }
-    }
-
     .cm_content {
         height: auto;
         width: 78%;
@@ -378,32 +364,6 @@ header {
                 width: 20%;
             }
         }
-
-        ul {
-            height: auto;
-            list-style: none;
-            padding-left: 40px;
-        }
-
-        ul li {
-            position: relative;
-            padding-left: 40px;
-            line-height: 35px;
-        }
-
-        ul li::before {
-            content: "";
-            background-image: url("img/diamond.gif");
-            background-size: 30px 30px;
-            background-repeat: no-repeat;
-            width: 30px;
-            height: 30px;
-            display: inline-block;
-            position: absolute;
-            left: 0;
-            top: 2px;
-        }
-
 
 
     }
@@ -443,6 +403,66 @@ header {
 }
 
 
+.part2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .cm_img {
+        height: auto;
+        width: 50%;
+        img {
+            height: 100%;
+            width: 100%;
+           
+        }
+    }
+
+    .content2{
+        padding: 15px;
+        width: 50%;
+        ul {
+            height: auto;
+            list-style: none;
+            padding-left: 40px;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 40px;
+            line-height: 35px;
+        }
+
+        ul li::before {
+            content: "";
+            background-image: url("img/diamond.gif");
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+
+    }
+}
+
+
+@media (max-width: 768px) {
+    .part2{
+        .cm_img{
+            width: 100%;
+        }
+        .content2{
+            width: 100%;
+            ul li{
+                padding-left: 0px;
+            }
+        }
+    }
+}
 
 /* //sec3 */
 
@@ -939,42 +959,6 @@ header {
 }
 
 
-
-
-.matter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    h2 {
-        font-weight: bold;
-        font-family: 'kanit';
-    }
-
-    ul {
-        list-style: none;
-    }
-
-    .mat {
-        width: 50%;
-        padding: 20px;
-        margin: 10px;
-        border-radius: 20px;
-        background-color: white;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .matter {
-        .mat {
-            margin-top: 20px;
-            width: 100%;
-        }
-    }
-}
 
 
 /* //footer */
