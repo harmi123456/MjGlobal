@@ -362,6 +362,9 @@ header {
         margin: 0 10px;
         img{
             height: 80%;
+            width: 90%;
+            position: relative;
+            left: 15px;
         }
     }
 }
