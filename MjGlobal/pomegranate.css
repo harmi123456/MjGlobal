@@ -131,7 +131,7 @@ header {
     }
 
     .dropdown select {
-        display: none; 
+        display: none;
     }
 
     .dropdown-btn {
@@ -344,7 +344,7 @@ header {
     .sec1 h1 {
         font-size: 35px;
         text-align: center;
-        
+
     }
 }
 
@@ -416,102 +416,67 @@ header {
 
 }
 
+
 /* //sec3 */
-
 .sec3 {
-
     height: auto;
     display: flex;
     flex-wrap: wrap;
 
-    svg {
-        width: 720px;
-        height: 100%;
-    }
-
-    circle {
-        animation-name: anim;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-    }
-
-    .turquoise {
-        fill: rgba(5, 166, 235, 0.5);
-    }
-
-    .blue {
-        fill: rgba(30, 131, 232, 0.5);
-    }
-
-    .purple {
-        fill: rgba(151, 45, 186, 0.5);
-    }
-
-    .violet {
-        fill: rgba(191, 0, 108, 0.5);
-    }
-
-    .red {
-        fill: rgba(237, 0, 32, 0.5);
-    }
-
-    .orange {
-        fill: rgba(240, 88, 0, 0.5);
-    }
-
-    .clementine {
-        fill: rgba(247, 148, 0, 0.5);
-    }
-
-    .gold {
-        fill: rgba(250, 204, 0, 0.5);
-    }
-
-    .lightgreen {
-        fill: rgba(247, 235, 0, 0.5);
-    }
-
-    .green {
-        fill: rgba(192, 222, 0, 0.5);
-    }
-
-    .darkgreen {
-        fill: rgba(138, 207, 0, 0.5);
+    .pomo {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .content {
-        width: 720px;
+        width: 50%;
+        font-family: "Kanit";
         padding: 20px;
-        text-align: center;
-        line-height: 30px;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        flex-direction: column;
-
+        text-align: center;
         h1 {
             color: #b22222;
-            font-family: 'Kanit';
             font-weight: bold;
-            font-size: 3rem;
+            text-align: center;
+        }
+
+    }
+}
+
+@media (max-width:768px) {
+    .sec3{
+        height: auto;
+        .pomo{
+            width: 100%;
+        }
+        .content{
+            width: 100%;
         }
     }
+}
 
+@media (max-width: 480px) {
+    .sec3{
+        height: auto;
+        .pomo{
+            width: 100%;
+            img{
+                width: 80%;
+            }
+        }
+        .content{
+            width: 100%;
+        }
+    }
 }
 
 
-
-@keyframes anim {
-    50% {
-        transform: translateY(-600px);
-    }
-
-    50.0001% {
-        transform: translateY(600px);
-    }
-}
-
-
+/* //sec4 */
 
 .sec4 {
     height: auto;
@@ -556,10 +521,6 @@ header {
     }
 }
 
-.sec4:hover .pom_img1 {
-    transform: scale(1.1);
-    transition: 1s;
-}
 
 
 .sec5 {
@@ -655,7 +616,7 @@ header {
 
 .sec7 {
     height: 500px;
-    display: flex;  
+    display: flex;
     flex-wrap: wrap;
 
     .images {
@@ -665,11 +626,30 @@ header {
         background: url('img/pomegranate8.jpg');
         background-size: cover;
         background-position: center;
+
         img {
             width: 100%;
             height: 100%;
         }
     }
+
+    .content {
+        width: 50%;
+        font-family: "Kanit";
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        h1 {
+            color: #b22222;
+            font-weight: bold;
+            text-align: center;
+        }
+
+    }
+
 }
 
 
@@ -680,8 +660,12 @@ header {
 
 
 @media (max-width: 768px) {
-    .sec7{
-        .images{
+    .sec7 {
+        height: auto;
+        .images {
+            width: 100%;
+        }
+        .content{
             width: 100%;
         }
     }

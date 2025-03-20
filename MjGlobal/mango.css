@@ -427,61 +427,17 @@ header {
     display: flex;
     flex-wrap: wrap;
 
-    svg {
-        width: 720px;
+    .mango {
+        width: 800px;
         height: 100%;
+        img{
+            height: 70%;
+            width: 100%;
+            animation: rotateMango 5s linear infinite;
+        }
     }
 
-    circle {
-        animation-name: anim;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-    }
-
-    .turquoise {
-        fill: rgba(5, 166, 235, 0.5);
-    }
-
-    .blue {
-        fill: rgba(30, 131, 232, 0.5);
-    }
-
-    .purple {
-        fill: rgba(151, 45, 186, 0.5);
-    }
-
-    .violet {
-        fill: rgba(191, 0, 108, 0.5);
-    }
-
-    .red {
-        fill: rgba(237, 0, 32, 0.5);
-    }
-
-    .orange {
-        fill: rgba(240, 88, 0, 0.5);
-    }
-
-    .clementine {
-        fill: rgba(247, 148, 0, 0.5);
-    }
-
-    .gold {
-        fill: rgba(250, 204, 0, 0.5);
-    }
-
-    .lightgreen {
-        fill: rgba(247, 235, 0, 0.5);
-    }
-
-    .green {
-        fill: rgba(192, 222, 0, 0.5);
-    }
-
-    .darkgreen {
-        fill: rgba(138, 207, 0, 0.5);
-    }
-
+   
     .content {
         width: 720px;
         padding: 20px;
@@ -505,6 +461,15 @@ header {
 
 }
 
+/* ///rotate mango */
+@keyframes rotateMango {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 
 @keyframes anim {
@@ -569,10 +534,6 @@ header {
     }
 }
 
-.sec4:hover .pom_img1 {
-    transform: scale(1.1);
-    transition: 1s;
-}
 
 
 .sec5 {
@@ -667,7 +628,7 @@ header {
 /* //sec7 */
 
 .sec7 {
-    height: 500px;
+    height: auto;
     display: flex;  
     flex-wrap: wrap;
 
@@ -675,7 +636,7 @@ header {
         display: flex;
         width: 50%;
         overflow: hidden;
-        background: url('img/pomegranate8.jpg');
+        background: url('img/mango_basket7.jpg');
         background-size: cover;
         background-position: center;
         img {
@@ -683,6 +644,28 @@ header {
             height: 100%;
         }
     }
+
+    .content {
+        width: 720px;
+        padding: 20px;
+        text-align: center;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+
+        h1 {
+            color: #DAA520;
+            font-family: 'Kanit';
+            font-weight: bold;
+            font-size: 3rem;
+        }
+        p{
+            color: #654321;
+        }
+    }
+
 }
 
 
