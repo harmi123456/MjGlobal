@@ -433,7 +433,7 @@ header {
         img{
             height: 70%;
             width: 100%;
-            animation: rotateMango 5s linear infinite;
+            animation: rotateMango 15s linear infinite;
         }
     }
 
